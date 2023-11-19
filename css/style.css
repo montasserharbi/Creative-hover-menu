@@ -1,0 +1,116 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background: linear-gradient(
+    rgba(226, 59, 59, 0.596),
+    rgba(125, 226, 105, 0.932)
+  );
+  height: 100vmax;
+}
+
+section {
+  background: url("../img/stars.png");
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+h1 {
+  color: aliceblue;
+  padding: 10px;
+  text-align: center;
+  background: rgb(57, 27, 128);
+  border-radius: 50px;
+  display: inline-block;
+  width: 270px;
+  transition: 0.5s;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+}
+h1:hover {
+  background: rgb(113, 5, 156);
+  letter-spacing: 5px;
+  width: 330px;
+  opacity: 1;
+}
+
+ul {
+  text-align: center;
+}
+ul:hover li a {
+  background: rgb(240, 24, 24);
+  opacity: 10%;
+}
+ul li {
+  list-style: none;
+  margin: 15px 0;
+}
+ul li a {
+  color: antiquewhite;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  background: rgb(194, 6, 147);
+  padding: 6px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  width: 100px;
+  transition: 0.5s;
+  text-transform: uppercase;
+  width: 120px;
+  position: relative;
+  z-index: 10;
+}
+ul li a:hover {
+  transform: scale(1.2);
+  background: rgb(127, 2, 185);
+  opacity: 1;
+  opacity: 1;
+}
+ul li::after {
+  content: attr(data-text);
+  color: wheat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 90px;
+  font-weight: 900;
+  text-transform: uppercase;
+  opacity: 0;
+  pointer-events: none;
+  letter-spacing: 35px;
+  transition: 0.5s;
+}
+ul li:hover:after {
+  opacity: 0.5;
+  letter-spacing: 3px;
+}
+ul li::before {
+  content: "";
+  width: 100px;
+  height: 80px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 70%);
+  border-radius: 50%;
+  box-shadow: 0 0 80px rgb(235, 252, 2);
+  opacity: 0.01;
+  transition: 0.5s;
+}
+ul li:hover::before {
+  opacity: 0.5;
+  width: 80px;
+}
